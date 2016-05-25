@@ -1,1 +1,3 @@
-# Index test file for Open Publishing
+# Azure REST API Documentation
+
+Welcome to Azure REST API Documentation!
