@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="consumes" content="application/json,text/json" />
+<meta name="produces" content="application/json,text/json" />
+<meta name="documentType" content="RestApi" />
+<meta name="version" content="0" />
+<meta name="locale" content="en-us" />
+<meta name="layout" content="Rest" />
+<meta name="pagetype" content="REST" />
+<meta name="langs" content="http" />
+<meta name="toc_rel" content="../TOC.json" />
+<meta name="breadcrumb_path" content="/toc.html" />
+
+    
+    <title>CognitiveServicesManagementClient</title>
+    <link rel="stylesheet" href="../_themes/css/052334480c38757b048e.restapi.css">
+  </head>
+  <body>
+
+    <header id="header" ms.pgarea="header">
+    <div id="cookie-consent-section" class="banner">
+        <div class="row">
+            <div class="left" id="cookie.consent.europe"></div>
+            <div class="middle"><a id="privacystatement-link" tabindex="1" href="#"></a></div>
+            <div class="right"><a tabindex="1" id="close"></a></div>
+        </div>
+    </div>
+  <div id="common-nav-placeholder">
+    <div class="container" role="banner">
+      <a href="https://docs.microsoft.com/"><p class="mslogo" id="microsoft">&nbsp;</p></a>
+      <!-- Disable lang picker temporarily -->
+      <div class="lang-picker lang-hover" style="display:none"><span class="selected-lang"></span><i class="arrow"></i></div>
+      <div class="lang-list lang-hover" style="display:none;">
+         <div class="three-column-container">
+             <div class="three-column-inner">
+                 <div class="three-column-1" >
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-2">
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-3" >
+                     <ul></ul>
+                 </div>
+             </div>
+         </div>
+         <div class="two-column-container" >
+             <div class="two-column-1">
+                 <ul></ul>
+             </div>
+             <div class="two-column-2">
+                 <ul></ul>
+             </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">
+    <ul class="breadcrumbs"></ul>
+    <ul class="headerlink">
+        <li><a href="https://aka.ms/abouttechnicaldocs" id="subheader.aboutdocs"></a></li>
+    </ul>
+  </div>
+
+  </div>
+</header>
+
+    <div class="reference">
+      <!-- Toc -->
+      <div id="sidebar" class="reference-toc" ms.cmpgrp="intopic toc">
+        <nav class="navigation"></nav>
+      </div>
+
+      <div class="reference-body-outer">
+        <!-- Content -->
+        <div id="main" class="reference-body" ms.pgarea="body">
+          <div id="menu-bar">
+            <nav class="navbar reference-nav">
+                <ul class="navbar-left" ms.cmpgrp="social">
+                  
+	              <li class="navbar-item">
+                    <a href="#" class="button is-primary is-small sharebutton"><i class="icon icon-share"></i>Share</a>
+                  </li>
+                </ul>
+                <div class="navbar-left" ms.cmpgrp="reference menu">
+                  <!-- Platform Selector -->
+                  
+                  <!-- Language Selector -->
+                  
+                  <div class="navbar-item">
+                    <p id="menu-lang" class="control is-horizontal">
+                      <label for="lang-selector" class="label">Language</label>
+                      <select name="lang-selector" id="lang-selector">
+                      
+                        <option value="lang-http">http</option>
+                      
+                      </select>
+                    </p>
+                  </div>
+                  
+                  <!-- Theme Selector -->
+                  <div class="navbar-item">
+                    <p id="menu-theme" class="control is-horizontal">
+                      <label for="theme-selector" class="label">Theme</label>
+                      <select name="theme-selector" id="theme-selector">
+                        <option value="">Light</option>
+                        <option value="theme-night">Dark</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+              </nav>
+          </div>
+	        <div id="menu-expand">
+	          <h6>
+	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
+	        </div>
+	        <div id="menu-nav" class="dropdown-container">
+	          <div class="dropdown dropdown-full mobilenavi">
+	            <select>
+	            </select>
+	          </div>
+	        </div>
+          <div class="share-container">
+            <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+            <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+          </div>
+
+              <article id="main-content" class="reference-content">
+                  
+
+<header class="header" id="overview">
+  <h2 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview">CognitiveServicesManagementClient</h2>
+</header>
+<header class="header" id="CognitiveServicesAccounts_Create">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_Create" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_Create"></h3>
+  <p>Create Cognitive Services Account. Accounts is a resource group wide resource type. It holds the keys for developer to access intelligent APIs. It&#39;s also the resource type for billing.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>accountName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the cognitive services account within the specified resource group. Cognitive Services account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The parameters to provide for the created account.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>sku</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                The SKU of the cognitive services account.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>kind</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Required. Indicates the type of cognitive service account.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>location</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update the request will succeed.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>tags</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                Must exist in the request. Must not be null.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          If resource is created successfully or already existed, the service should return 200 (OK).
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          If resource is created successfully, the service should return 201 (OK).
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_Create"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_Update">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_Update" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_Update"></h3>
+  <p>Updates a Cognitive Services account</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PATCH</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>accountName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the cognitive services account within the specified resource group. Cognitive Services account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The parameters to provide for the created account.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>sku</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                The SKU of the cognitive services account.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>tags</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The resource provider should return 200 (OK) to indicate that the operation completed successfully. 
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed. If the resource group *or* resource does not exist, 404 (NotFound) should be returned.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_Update"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_Delete">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_Delete" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_Delete"></h3>
+  <p>Deletes a Cognitive Services account from the resource group. </p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>accountName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the cognitive services account within the specified resource group. Cognitive Services account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          A 200 (OK) should be returned if the object exists and was deleted successfully;
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          a 204 (NoContent) should be used if the resource does not exist and the request is well formed.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_Delete"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_GetProperties">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_GetProperties" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_GetProperties"></h3>
+  <p>Returns a Cognitive Services account specified by the parameters.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>accountName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the cognitive services account within the specified resource group. Cognitive Services account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The resource provider should return 200 (OK) to indicate that the operation completed successfully.
+For a detailed explanation of each field in the response body, please refer to the request body description in the PUT resource section. The only GET specific properties are “name,” “type” and “id.”
+Field	Description
+Kind	required.  String.
+	The API set for this API account. It can be 
+	· a single API, for example: Face API, Vision API, Speech API. 
+	a bundle of APIs:  Face + Speech, Vision + Emotion, etc.
+sku.name	Required.
+	The pricing tier/plan of this API. Could be: 
+	F0 - Free
+	B0 - Basic
+	S0 - Standard
+	P0 - Premium
+
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed. If the resource does not exist, 404 (NotFound) should be returned.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_GetProperties"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_ListByResourceGroup">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_ListByResourceGroup" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_ListByResourceGroup"></h3>
+  <p>Returns all the resources of a particular type belonging to a resource group</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The resource provider should return 200 (OK) to indicate that the operation completed successfully. For other errors (e.g. internal errors) use the appropriate HTTP error code.
+The nextLink field is expected to point to the URL the client should use to fetch the next page (per server side paging). This matches the OData guidelines for paged responses here. If a resource provider does not support paging, it should return the same body (JSON object with “value” property) but omit nextLink entirely (or set to null, *not* empty string) for future compatibility.
+The nextLink should be implemented using following query parameters:
+· skipToken: opaque token that allows the resource provider to skip resources already enumerated. This value is defined and returned by the RP after first request via nextLink.
+· top: the optional client query parameter which defines the maximum number of records to be returned by the server.
+Implementation details:
+· NextLink may include all the query parameters (specifically OData $filter) used by the client in the first query. 
+· Server may return less records than requested with nextLink. Returning zero records with NextLink is an acceptable response. 
+Clients must fetch records until the nextLink is not returned back / null. Clients should never rely on number of returned records to determinate if pagination is completed.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed. If the resource group does not exist, 404 (NotFound) will be returned.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_ListByResourceGroup"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_List">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_List" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_List"></h3>
+  <p>Returns all the resources of a particular type belonging to a subscription.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.CognitiveServices/accounts?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The resource provider should return 200 (OK) to indicate that the operation completed successfully. For other errors (e.g. internal errors) use the appropriate HTTP error code.
+The nextLink field is expected to point to the URL the client should use to fetch the next page (per server side paging). This matches the OData guidelines for paged responses. If a resource provider does not support paging, it should return the same body but leave nextLink empty for future compatibility.
+For a detailed explanation of each field in the response body, please refer to the request body description in the PUT resource section. 
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_List"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_ListKeys">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_ListKeys" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_ListKeys"></h3>
+  <p>Lists the account keys for the specified Cognitive Services account.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/listKeys?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>accountName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the cognitive services account within the specified resource group. Congitive Services account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.  
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          Returns with a response body containing the subscription keys for the resource: key1
+The first API key for authentication when client calls the API endpoint.
+
+key2
+The second API key for authentication when client calls the API endpoint.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_ListKeys"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_RegenerateKey">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_RegenerateKey" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_RegenerateKey"></h3>
+  <p>Regenerates the specified account key for the specified Cognitive Services account.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/regenerateKey?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>accountName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the cognitive services account within the specified resource group. Cognitive Services account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.  
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        regenerate key parameters.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>keyName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                key name to generate (Key1|Key2)
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_RegenerateKey"></div>
+  </section>
+</div>
+<header class="header" id="CognitiveServicesAccounts_ListSkus">
+  <div class="primary">
+  <h3 id="management_azure_com_CognitiveServicesManagementClient_2016_02_01_preview_CognitiveServicesAccounts_ListSkus" data-uid="management.azure.com/CognitiveServicesManagementClient/2016-02-01-preview/CognitiveServicesAccounts_ListSkus"></h3>
+  <p>List available SKUs for the requested Cognitive Services account</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/skus?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group within the user's subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>accountName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the cognitive services account within the specified resource group. Cognitive Services account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.  
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2016-02-01-preview
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The resource provider should return 200 (OK) to indicate that the operation completed successfully.
+For a detailed explanation of each field in the response body, please refer to the request body description in the PUT resource section. The only GET specific properties are “name,” “type” and “id.”
+Field	Description
+sku	Required, object
+	The exact set of keys that define this sku. This matches the fields on the respective resource.
+sku.name	Required, string
+	The name of the SKU. This is typically a letter + number code, such as A0 or P3
+sku.tier	Required, string
+	The tier of this particular SKU. Typically one of:
+	· Free
+	· Basic
+	· Standard
+	· Premium
+
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          Error response describing why the operation failed. If the resource does not exist, 404 (NotFound) will be returned.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CognitiveServices.swagger.json" data-api-operation-id="CognitiveServicesAccounts_ListSkus"></div>
+  </section>
+</div>
+
+              </article>
+
+          
+      </div>
+    </div>
+    </div>
+    <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+    <div id="footerWrapper"></div>
+    <script src="../_themes/javascript/052334480c38757b048e.rest.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3970 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="consumes" content="application/json" />
+<meta name="produces" content="application/json" />
+<meta name="security" content="{
+  &quot;azure_auth&quot;: [
+    &quot;user_impersonation&quot;
+  ]
+}" />
+<meta name="securityDefinitions" content="{
+  &quot;azure_auth&quot;: {
+    &quot;type&quot;: &quot;oauth2&quot;,
+    &quot;authorizationUrl&quot;: &quot;https://login.microsoftonline.com/common/oauth2/authorize&quot;,
+    &quot;flow&quot;: &quot;implicit&quot;,
+    &quot;description&quot;: &quot;Azure Active Directory OAuth2 Flow&quot;,
+    &quot;scopes&quot;: {
+      &quot;user_impersonation&quot;: &quot;impersonate your user account&quot;
+    }
+  }
+}" />
+<meta name="documentType" content="RestApi" />
+<meta name="version" content="0" />
+<meta name="locale" content="en-us" />
+<meta name="layout" content="Rest" />
+<meta name="pagetype" content="REST" />
+<meta name="langs" content="http" />
+<meta name="toc_rel" content="../TOC.json" />
+<meta name="breadcrumb_path" content="/toc.html" />
+
+    
+    <title>CdnManagementClient</title>
+    <link rel="stylesheet" href="../_themes/css/052334480c38757b048e.restapi.css">
+  </head>
+  <body>
+
+    <header id="header" ms.pgarea="header">
+    <div id="cookie-consent-section" class="banner">
+        <div class="row">
+            <div class="left" id="cookie.consent.europe"></div>
+            <div class="middle"><a id="privacystatement-link" tabindex="1" href="#"></a></div>
+            <div class="right"><a tabindex="1" id="close"></a></div>
+        </div>
+    </div>
+  <div id="common-nav-placeholder">
+    <div class="container" role="banner">
+      <a href="https://docs.microsoft.com/"><p class="mslogo" id="microsoft">&nbsp;</p></a>
+      <!-- Disable lang picker temporarily -->
+      <div class="lang-picker lang-hover" style="display:none"><span class="selected-lang"></span><i class="arrow"></i></div>
+      <div class="lang-list lang-hover" style="display:none;">
+         <div class="three-column-container">
+             <div class="three-column-inner">
+                 <div class="three-column-1" >
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-2">
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-3" >
+                     <ul></ul>
+                 </div>
+             </div>
+         </div>
+         <div class="two-column-container" >
+             <div class="two-column-1">
+                 <ul></ul>
+             </div>
+             <div class="two-column-2">
+                 <ul></ul>
+             </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">
+    <ul class="breadcrumbs"></ul>
+    <ul class="headerlink">
+        <li><a href="https://aka.ms/abouttechnicaldocs" id="subheader.aboutdocs"></a></li>
+    </ul>
+  </div>
+
+  </div>
+</header>
+
+    <div class="reference">
+      <!-- Toc -->
+      <div id="sidebar" class="reference-toc" ms.cmpgrp="intopic toc">
+        <nav class="navigation"></nav>
+      </div>
+
+      <div class="reference-body-outer">
+        <!-- Content -->
+        <div id="main" class="reference-body" ms.pgarea="body">
+          <div id="menu-bar">
+            <nav class="navbar reference-nav">
+                <ul class="navbar-left" ms.cmpgrp="social">
+                  
+	              <li class="navbar-item">
+                    <a href="#" class="button is-primary is-small sharebutton"><i class="icon icon-share"></i>Share</a>
+                  </li>
+                </ul>
+                <div class="navbar-left" ms.cmpgrp="reference menu">
+                  <!-- Platform Selector -->
+                  
+                  <!-- Language Selector -->
+                  
+                  <div class="navbar-item">
+                    <p id="menu-lang" class="control is-horizontal">
+                      <label for="lang-selector" class="label">Language</label>
+                      <select name="lang-selector" id="lang-selector">
+                      
+                        <option value="lang-http">http</option>
+                      
+                      </select>
+                    </p>
+                  </div>
+                  
+                  <!-- Theme Selector -->
+                  <div class="navbar-item">
+                    <p id="menu-theme" class="control is-horizontal">
+                      <label for="theme-selector" class="label">Theme</label>
+                      <select name="theme-selector" id="theme-selector">
+                        <option value="">Light</option>
+                        <option value="theme-night">Dark</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+              </nav>
+          </div>
+	        <div id="menu-expand">
+	          <h6>
+	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
+	        </div>
+	        <div id="menu-nav" class="dropdown-container">
+	          <div class="dropdown dropdown-full mobilenavi">
+	            <select>
+	            </select>
+	          </div>
+	        </div>
+          <div class="share-container">
+            <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+            <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+          </div>
+
+              <article id="main-content" class="reference-content">
+                  
+
+<header class="header" id="overview">
+  <h2 id="management_azure_com_CdnManagementClient_2015_06_01" data-uid="management.azure.com/CdnManagementClient/2015-06-01">CdnManagementClient</h2>
+</header>
+<header class="header" id="Profiles_ListBySubscriptionId">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Profiles_ListBySubscriptionId" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Profiles_ListBySubscriptionId"><p>Lists the CDN profiles within an Azure subscitption.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Cdn/profiles?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Profiles_ListBySubscriptionId"></div>
+  </section>
+</div>
+<header class="header" id="Profiles_ListByResourceGroup">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Profiles_ListByResourceGroup" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Profiles_ListByResourceGroup"><p>Lists the CDN profiles within a resource group.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Profiles_ListByResourceGroup"></div>
+  </section>
+</div>
+<header class="header" id="Profiles_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Profiles_Get" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Profiles_Get"><p>Gets a CDN profile with the specified parameters.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Profiles_Get"></div>
+  </section>
+</div>
+<header class="header" id="Profiles_Create">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Profiles_Create" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Profiles_Create"><p>Creates a new CDN profile with the specified parameters.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Profile properties needed for creation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>location</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Profile location
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>tags</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                Profile tags
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          Created
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and  the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Profiles_Create"></div>
+  </section>
+</div>
+<header class="header" id="Profiles_Update">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Profiles_Update" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Profiles_Update"><p>Updates an existing CDN profile with the specified parameters.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PATCH</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Profile properties needed for update.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>tags</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                Profile tags
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Profiles_Update"></div>
+  </section>
+</div>
+<header class="header" id="Profiles_DeleteIfExists">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Profiles_DeleteIfExists" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Profiles_DeleteIfExists"><p>Deletes an existing CDN profile with the specified parameters. Deleting a profile will result in the deletion of all subresources including endpoints, origins and custom domains.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          No Content.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Profiles_DeleteIfExists"></div>
+  </section>
+</div>
+<header class="header" id="Profiles_GenerateSsoUri">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Profiles_GenerateSsoUri" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Profiles_GenerateSsoUri"><p>Generates a dynamic SSO URI used to sign in to the CDN Supplemental Portal used for advanced management tasks, such as Country Filtering, Advanced HTTP Reports, and Real-time Stats and Alerts. The SSO URI changes approximately every 10 minutes.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/generateSsoUri?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Profiles_GenerateSsoUri"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_ListByProfile">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_ListByProfile" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_ListByProfile"><p>Lists existing CDN endpoints within a profile.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_ListByProfile"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_Get" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_Get"><p>Gets an existing CDN endpoint with the specified parameters.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_Get"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_Create">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_Create" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_Create"><p>Creates a new CDN endpoint with the specified parameters.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Endpoint properties
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>location</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Endpoint location
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>tags</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                Endpoint tags
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          Created
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_Create"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_Update">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_Update" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_Update"><p>Updates an existing CDN endpoint with the specified parameters. Only tags and OriginHostHeader can be updated after creating an endpoint. To update origins, use the Update Origin operation. To update custom domains, use the Update Custom Domain operation.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PATCH</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Endpoint properties
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>tags</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                Endpoint tags
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and  the operation will complete asynchronously
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_Update"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_DeleteIfExists">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_DeleteIfExists" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_DeleteIfExists"><p>Deletes an existing CDN endpoint with the specified parameters.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          No Content
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_DeleteIfExists"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_Start">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_Start" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_Start"><p>Starts an existing stopped CDN endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/start?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_Start"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_Stop">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_Stop" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_Stop"><p>Stops an existing running CDN endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/stop?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_Stop"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_PurgeContent">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_PurgeContent" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_PurgeContent"><p>Forcibly purges CDN endpoint content.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/purge?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>contentFilePaths</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The path to the content to be purged. Path can describe a file or directory.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>contentPaths</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                The path to the content to be purged. Can describe a file path or a wild card directory.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_PurgeContent"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_LoadContent">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_LoadContent" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_LoadContent"><p>Forcibly pre-loads CDN endpoint content.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/load?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>contentFilePaths</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The path to the content to be loaded. Path should describe a file.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>contentPaths</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                The path to the content to be loaded. Should describe a file path.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_LoadContent"></div>
+  </section>
+</div>
+<header class="header" id="Endpoints_ValidateCustomDomain">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Endpoints_ValidateCustomDomain" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Endpoints_ValidateCustomDomain"><p>Validates a custom domain mapping to ensure it maps to the correct CNAME in DNS.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/validateCustomDomain?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>customDomainProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Custom domain to validate.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>hostName</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                The host name of the custom domain. Must be a domain name.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Endpoints_ValidateCustomDomain"></div>
+  </section>
+</div>
+<header class="header" id="Origins_ListByEndpoint">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Origins_ListByEndpoint" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Origins_ListByEndpoint"><p>Lists the existing CDN origins within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Origins_ListByEndpoint"></div>
+  </section>
+</div>
+<header class="header" id="Origins_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Origins_Get" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Origins_Get"><p>Gets an existing CDN origin within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>originName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the origin, an arbitrary value but it needs to be unique under endpoint
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Origins_Get"></div>
+  </section>
+</div>
+<header class="header" id="Origins_Create">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Origins_Create" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Origins_Create"><p>Creates a new CDN origin within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>originName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the origin, an arbitrary value but it needs to be unique under endpoint
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>originProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Origin properties
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          Created
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Origins_Create"></div>
+  </section>
+</div>
+<header class="header" id="Origins_Update">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Origins_Update" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Origins_Update"><p>Updates an existing CDN origin within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PATCH</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>originName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the origin. Must be unique within endpoint.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>originProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Origin properties
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Origins_Update"></div>
+  </section>
+</div>
+<header class="header" id="Origins_DeleteIfExists">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Origins_DeleteIfExists" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Origins_DeleteIfExists"><p>Deletes an existing CDN origin within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/origins/{originName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>originName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the origin. Must be unique within endpoint.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          No Content
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Origins_DeleteIfExists"></div>
+  </section>
+</div>
+<header class="header" id="CustomDomains_ListByEndpoint">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_CustomDomains_ListByEndpoint" data-uid="management.azure.com/CdnManagementClient/2015-06-01/CustomDomains_ListByEndpoint"><p>Lists the existing CDN custom domains within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/customDomains?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="CustomDomains_ListByEndpoint"></div>
+  </section>
+</div>
+<header class="header" id="CustomDomains_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_CustomDomains_Get" data-uid="management.azure.com/CdnManagementClient/2015-06-01/CustomDomains_Get"><p>Gets an existing CDN custom domain within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/customDomains/{customDomainName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>customDomainName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the custom domain within an endpoint.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="CustomDomains_Get"></div>
+  </section>
+</div>
+<header class="header" id="CustomDomains_Create">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_CustomDomains_Create" data-uid="management.azure.com/CdnManagementClient/2015-06-01/CustomDomains_Create"><p>Creates a new CDN custom domain within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/customDomains/{customDomainName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>customDomainName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the custom domain within an endpoint.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>customDomainProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Custom domain properties required for creation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          Created
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="CustomDomains_Create"></div>
+  </section>
+</div>
+<header class="header" id="CustomDomains_Update">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_CustomDomains_Update" data-uid="management.azure.com/CdnManagementClient/2015-06-01/CustomDomains_Update"><p>Updates an existing CDN custom domain within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PATCH</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/customDomains/{customDomainName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>customDomainName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the custom domain within an endpoint.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>customDomainProperties</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Custom domain properties to update.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="CustomDomains_Update"></div>
+  </section>
+</div>
+<header class="header" id="CustomDomains_DeleteIfExists">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_CustomDomains_DeleteIfExists" data-uid="management.azure.com/CdnManagementClient/2015-06-01/CustomDomains_DeleteIfExists"><p>Deletes an existing CDN custom domain within an endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/endpoints/{endpointName}/customDomains/{customDomainName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>customDomainName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the custom domain within an endpoint.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>endpointName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the endpoint within the CDN profile.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>profileName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the CDN profile within the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Name of the resource group within the Azure subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Azure Subscription ID.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          Accepted and the operation will complete asynchronously.
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          No Content
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="CustomDomains_DeleteIfExists"></div>
+  </section>
+</div>
+<header class="header" id="NameAvailability_CheckNameAvailability">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_NameAvailability_CheckNameAvailability" data-uid="management.azure.com/CdnManagementClient/2015-06-01/NameAvailability_CheckNameAvailability"><p>Check the availability of a resource name without creating the resource. This is needed for resources where name is globally unique, such as a CDN endpoint.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /providers/Microsoft.Cdn/checkNameAvailability?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>checkNameAvailabilityInput</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Input to check.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>name</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                The resource name to validate.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>type</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                The type of the resource whose name is to be validated.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="NameAvailability_CheckNameAvailability"></div>
+  </section>
+</div>
+<header class="header" id="Operations_List">
+  <div class="primary">
+  <h3 id="management_azure_com_CdnManagementClient_2015_06_01_Operations_List" data-uid="management.azure.com/CdnManagementClient/2015-06-01/Operations_List"><p>Lists all of the available CDN REST API operations.</p>
+</h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /providers/Microsoft.Cdn/operations?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Version of the API to be used with the client request. Current version is 2015-06-01
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          OK
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>default</code>
+          </li>
+        </ol>
+        <section class="description">
+          CDN error response describing why the operation failed.
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="CDN.swagger.json" data-api-operation-id="Operations_List"></div>
+  </section>
+</div>
+
+              </article>
+
+          
+      </div>
+    </div>
+    </div>
+    <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+    <div id="footerWrapper"></div>
+    <script src="../_themes/javascript/052334480c38757b048e.rest.js"></script>
+  </body>
+</html>

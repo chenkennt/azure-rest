@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="consumes" content="application/json,text/json" />
+<meta name="produces" content="application/json,text/json" />
+<meta name="security" content="{
+  &quot;azure_auth&quot;: [
+    &quot;user_impersonation&quot;
+  ]
+}" />
+<meta name="securityDefinitions" content="{
+  &quot;azure_auth&quot;: {
+    &quot;type&quot;: &quot;oauth2&quot;,
+    &quot;authorizationUrl&quot;: &quot;https://login.microsoftonline.com/common/oauth2/authorize&quot;,
+    &quot;flow&quot;: &quot;implicit&quot;,
+    &quot;description&quot;: &quot;Azure Active Directory OAuth2 Flow&quot;,
+    &quot;scopes&quot;: {
+      &quot;user_impersonation&quot;: &quot;impersonate your user account&quot;
+    }
+  }
+}" />
+<meta name="documentType" content="RestApi" />
+<meta name="version" content="0" />
+<meta name="locale" content="en-us" />
+<meta name="layout" content="Rest" />
+<meta name="pagetype" content="REST" />
+<meta name="langs" content="http" />
+<meta name="toc_rel" content="../TOC.json" />
+<meta name="breadcrumb_path" content="/toc.html" />
+
+    
+    <title>SubscriptionClient</title>
+    <link rel="stylesheet" href="../_themes/css/052334480c38757b048e.restapi.css">
+  </head>
+  <body>
+
+    <header id="header" ms.pgarea="header">
+    <div id="cookie-consent-section" class="banner">
+        <div class="row">
+            <div class="left" id="cookie.consent.europe"></div>
+            <div class="middle"><a id="privacystatement-link" tabindex="1" href="#"></a></div>
+            <div class="right"><a tabindex="1" id="close"></a></div>
+        </div>
+    </div>
+  <div id="common-nav-placeholder">
+    <div class="container" role="banner">
+      <a href="https://docs.microsoft.com/"><p class="mslogo" id="microsoft">&nbsp;</p></a>
+      <!-- Disable lang picker temporarily -->
+      <div class="lang-picker lang-hover" style="display:none"><span class="selected-lang"></span><i class="arrow"></i></div>
+      <div class="lang-list lang-hover" style="display:none;">
+         <div class="three-column-container">
+             <div class="three-column-inner">
+                 <div class="three-column-1" >
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-2">
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-3" >
+                     <ul></ul>
+                 </div>
+             </div>
+         </div>
+         <div class="two-column-container" >
+             <div class="two-column-1">
+                 <ul></ul>
+             </div>
+             <div class="two-column-2">
+                 <ul></ul>
+             </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">
+    <ul class="breadcrumbs"></ul>
+    <ul class="headerlink">
+        <li><a href="https://aka.ms/abouttechnicaldocs" id="subheader.aboutdocs"></a></li>
+    </ul>
+  </div>
+
+  </div>
+</header>
+
+    <div class="reference">
+      <!-- Toc -->
+      <div id="sidebar" class="reference-toc" ms.cmpgrp="intopic toc">
+        <nav class="navigation"></nav>
+      </div>
+
+      <div class="reference-body-outer">
+        <!-- Content -->
+        <div id="main" class="reference-body" ms.pgarea="body">
+          <div id="menu-bar">
+            <nav class="navbar reference-nav">
+                <ul class="navbar-left" ms.cmpgrp="social">
+                  
+	              <li class="navbar-item">
+                    <a href="#" class="button is-primary is-small sharebutton"><i class="icon icon-share"></i>Share</a>
+                  </li>
+                </ul>
+                <div class="navbar-left" ms.cmpgrp="reference menu">
+                  <!-- Platform Selector -->
+                  
+                  <!-- Language Selector -->
+                  
+                  <div class="navbar-item">
+                    <p id="menu-lang" class="control is-horizontal">
+                      <label for="lang-selector" class="label">Language</label>
+                      <select name="lang-selector" id="lang-selector">
+                      
+                        <option value="lang-http">http</option>
+                      
+                      </select>
+                    </p>
+                  </div>
+                  
+                  <!-- Theme Selector -->
+                  <div class="navbar-item">
+                    <p id="menu-theme" class="control is-horizontal">
+                      <label for="theme-selector" class="label">Theme</label>
+                      <select name="theme-selector" id="theme-selector">
+                        <option value="">Light</option>
+                        <option value="theme-night">Dark</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+              </nav>
+          </div>
+	        <div id="menu-expand">
+	          <h6>
+	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
+	        </div>
+	        <div id="menu-nav" class="dropdown-container">
+	          <div class="dropdown dropdown-full mobilenavi">
+	            <select>
+	            </select>
+	          </div>
+	        </div>
+          <div class="share-container">
+            <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+            <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+          </div>
+
+              <article id="main-content" class="reference-content">
+                  
+
+<header class="header" id="overview">
+  <h2 id="management_azure_com_SubscriptionClient_2015_11_01" data-uid="management.azure.com/SubscriptionClient/2015-11-01">SubscriptionClient</h2>
+</header>
+<header class="header" id="Subscriptions_ListLocations">
+  <div class="primary">
+  <h3 id="management_azure_com_SubscriptionClient_2015_11_01_Subscriptions_ListLocations" data-uid="management.azure.com/SubscriptionClient/2015-11-01/Subscriptions_ListLocations"></h3>
+  <p>Gets a list of the subscription locations.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/locations?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Id of the subscription
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Subscriptions.swagger.json" data-api-operation-id="Subscriptions_ListLocations"></div>
+  </section>
+</div>
+<header class="header" id="Subscriptions_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_SubscriptionClient_2015_11_01_Subscriptions_Get" data-uid="management.azure.com/SubscriptionClient/2015-11-01/Subscriptions_Get"></h3>
+  <p>Gets details about particular subscription.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Id of the subscription.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Subscriptions.swagger.json" data-api-operation-id="Subscriptions_Get"></div>
+  </section>
+</div>
+<header class="header" id="Subscriptions_List">
+  <div class="primary">
+  <h3 id="management_azure_com_SubscriptionClient_2015_11_01_Subscriptions_List" data-uid="management.azure.com/SubscriptionClient/2015-11-01/Subscriptions_List"></h3>
+  <p>Gets a list of the subscriptionIds.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Subscriptions.swagger.json" data-api-operation-id="Subscriptions_List"></div>
+  </section>
+</div>
+<header class="header" id="Tenants_List">
+  <div class="primary">
+  <h3 id="management_azure_com_SubscriptionClient_2015_11_01_Tenants_List" data-uid="management.azure.com/SubscriptionClient/2015-11-01/Tenants_List"></h3>
+  <p>Gets a list of the tenantIds.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /tenants?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Subscriptions.swagger.json" data-api-operation-id="Tenants_List"></div>
+  </section>
+</div>
+
+              </article>
+
+          
+      </div>
+    </div>
+    </div>
+    <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+    <div id="footerWrapper"></div>
+    <script src="../_themes/javascript/052334480c38757b048e.rest.js"></script>
+  </body>
+</html>

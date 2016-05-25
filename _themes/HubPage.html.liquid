@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="ms.pagetype" content="hubpage" />
+    <meta name="ms.sitename" content="DOCS" />
+    {{ metadata }}
+    {% if page._op_canonicalUrl != null %}<link href="{{ page._op_canonicalUrl }}" rel="canonical">{% endif %}
+    <title>{{ page.title }}</title>
+    {% style _themes/css/hubpage.css %}
+  </head>
+  <body>
+    {% include header.html %}
+    <div ms.pgarea="body">
+      {{ content }}
+    </div>
+    <div id="footerWrapper"></div>
+    {% js _themes/javascript/hubpage.js %}
+  </body>
+</html>

@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="consumes" content="application/json,text/json" />
+<meta name="produces" content="application/json,text/json" />
+<meta name="security" content="{
+  &quot;azure_auth&quot;: [
+    &quot;user_impersonation&quot;
+  ]
+}" />
+<meta name="securityDefinitions" content="{
+  &quot;azure_auth&quot;: {
+    &quot;type&quot;: &quot;oauth2&quot;,
+    &quot;authorizationUrl&quot;: &quot;https://login.microsoftonline.com/common/oauth2/authorize&quot;,
+    &quot;flow&quot;: &quot;implicit&quot;,
+    &quot;description&quot;: &quot;Azure Active Directory OAuth2 Flow&quot;,
+    &quot;scopes&quot;: {
+      &quot;user_impersonation&quot;: &quot;impersonate your user account&quot;
+    }
+  }
+}" />
+<meta name="documentType" content="RestApi" />
+<meta name="version" content="0" />
+<meta name="locale" content="en-us" />
+<meta name="layout" content="Rest" />
+<meta name="pagetype" content="REST" />
+<meta name="langs" content="http" />
+<meta name="toc_rel" content="../TOC.json" />
+<meta name="breadcrumb_path" content="/toc.html" />
+
+    
+    <title>RedisManagementClient</title>
+    <link rel="stylesheet" href="../_themes/css/052334480c38757b048e.restapi.css">
+  </head>
+  <body>
+
+    <header id="header" ms.pgarea="header">
+    <div id="cookie-consent-section" class="banner">
+        <div class="row">
+            <div class="left" id="cookie.consent.europe"></div>
+            <div class="middle"><a id="privacystatement-link" tabindex="1" href="#"></a></div>
+            <div class="right"><a tabindex="1" id="close"></a></div>
+        </div>
+    </div>
+  <div id="common-nav-placeholder">
+    <div class="container" role="banner">
+      <a href="https://docs.microsoft.com/"><p class="mslogo" id="microsoft">&nbsp;</p></a>
+      <!-- Disable lang picker temporarily -->
+      <div class="lang-picker lang-hover" style="display:none"><span class="selected-lang"></span><i class="arrow"></i></div>
+      <div class="lang-list lang-hover" style="display:none;">
+         <div class="three-column-container">
+             <div class="three-column-inner">
+                 <div class="three-column-1" >
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-2">
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-3" >
+                     <ul></ul>
+                 </div>
+             </div>
+         </div>
+         <div class="two-column-container" >
+             <div class="two-column-1">
+                 <ul></ul>
+             </div>
+             <div class="two-column-2">
+                 <ul></ul>
+             </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">
+    <ul class="breadcrumbs"></ul>
+    <ul class="headerlink">
+        <li><a href="https://aka.ms/abouttechnicaldocs" id="subheader.aboutdocs"></a></li>
+    </ul>
+  </div>
+
+  </div>
+</header>
+
+    <div class="reference">
+      <!-- Toc -->
+      <div id="sidebar" class="reference-toc" ms.cmpgrp="intopic toc">
+        <nav class="navigation"></nav>
+      </div>
+
+      <div class="reference-body-outer">
+        <!-- Content -->
+        <div id="main" class="reference-body" ms.pgarea="body">
+          <div id="menu-bar">
+            <nav class="navbar reference-nav">
+                <ul class="navbar-left" ms.cmpgrp="social">
+                  
+	              <li class="navbar-item">
+                    <a href="#" class="button is-primary is-small sharebutton"><i class="icon icon-share"></i>Share</a>
+                  </li>
+                </ul>
+                <div class="navbar-left" ms.cmpgrp="reference menu">
+                  <!-- Platform Selector -->
+                  
+                  <!-- Language Selector -->
+                  
+                  <div class="navbar-item">
+                    <p id="menu-lang" class="control is-horizontal">
+                      <label for="lang-selector" class="label">Language</label>
+                      <select name="lang-selector" id="lang-selector">
+                      
+                        <option value="lang-http">http</option>
+                      
+                      </select>
+                    </p>
+                  </div>
+                  
+                  <!-- Theme Selector -->
+                  <div class="navbar-item">
+                    <p id="menu-theme" class="control is-horizontal">
+                      <label for="theme-selector" class="label">Theme</label>
+                      <select name="theme-selector" id="theme-selector">
+                        <option value="">Light</option>
+                        <option value="theme-night">Dark</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+              </nav>
+          </div>
+	        <div id="menu-expand">
+	          <h6>
+	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
+	        </div>
+	        <div id="menu-nav" class="dropdown-container">
+	          <div class="dropdown dropdown-full mobilenavi">
+	            <select>
+	            </select>
+	          </div>
+	        </div>
+          <div class="share-container">
+            <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+            <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+          </div>
+
+              <article id="main-content" class="reference-content">
+                  
+
+<header class="header" id="overview">
+  <h2 id="management_azure_com_RedisManagementClient_2016_04_01" data-uid="management.azure.com/RedisManagementClient/2016-04-01">RedisManagementClient</h2>
+</header>
+<header class="header" id="Redis_CreateOrUpdate">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_CreateOrUpdate" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_CreateOrUpdate"></h3>
+  <p>Create a redis cache, or replace (overwrite/recreate, with potential downtime) an existing cache</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the CreateOrUpdate redis operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                  <em>(required)</em>
+                </li>
+              </ol>
+              <section class="description">
+                Redis cache properties.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_CreateOrUpdate"></div>
+  </section>
+</div>
+<header class="header" id="Redis_Delete">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_Delete" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_Delete"></h3>
+  <p>Deletes a redis cache. This operation takes a while to complete.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_Delete"></div>
+  </section>
+</div>
+<header class="header" id="Redis_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_Get" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_Get"></h3>
+  <p>Gets a redis cache (resource description).</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_Get"></div>
+  </section>
+</div>
+<header class="header" id="Redis_ListByResourceGroup">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_ListByResourceGroup" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_ListByResourceGroup"></h3>
+  <p>Gets all redis caches in a resource group.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_ListByResourceGroup"></div>
+  </section>
+</div>
+<header class="header" id="Redis_List">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_List" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_List"></h3>
+  <p>Gets all redis caches in the specified subscription.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Cache/Redis/?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_List"></div>
+  </section>
+</div>
+<header class="header" id="Redis_ListKeys">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_ListKeys" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_ListKeys"></h3>
+  <p>Retrieve a redis cache&#39;s access keys. This operation requires write permission to the cache resource.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/listKeys?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          Lists the keys for Redis Cache
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_ListKeys"></div>
+  </section>
+</div>
+<header class="header" id="Redis_RegenerateKey">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_RegenerateKey" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_RegenerateKey"></h3>
+  <p>Regenerate redis cache&#39;s access keys. This operation requires write permission to the cache resource.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/regenerateKey?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Specifies which key to reset.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>keyType</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Which redis access key to reset
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          Lists the regenerated keys for Redis Cache
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_RegenerateKey"></div>
+  </section>
+</div>
+<header class="header" id="Redis_ForceReboot">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_ForceReboot" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_ForceReboot"></h3>
+  <p>Reboot specified redis node(s). This operation requires write permission to the cache resource. There can be potential data loss.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/forceReboot?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Specifies which redis node(s) to reboot.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>rebootType</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Which redis node(s) to reboot. Depending on this value data loss is possible.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>shardId</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                In case of cluster cache, this specifies shard id which should be rebooted.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_ForceReboot"></div>
+  </section>
+</div>
+<header class="header" id="Redis_import">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_import" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_import"></h3>
+  <p>Import data into redis cache.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/import?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters for redis import operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>format</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                File format.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>files</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                files to import
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_import"></div>
+  </section>
+</div>
+<header class="header" id="Redis_export">
+  <div class="primary">
+  <h3 id="management_azure_com_RedisManagementClient_2016_04_01_Redis_export" data-uid="management.azure.com/RedisManagementClient/2016-04-01/Redis_export"></h3>
+  <p>Import data into redis cache.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/Redis/{name}/export?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the redis cache.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters for redis export operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>format</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                File format.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>prefix</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Prifix to use for exported files.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>container</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Container name to export to.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Redis.swagger.json" data-api-operation-id="Redis_export"></div>
+  </section>
+</div>
+
+              </article>
+
+          
+      </div>
+    </div>
+    </div>
+    <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+    <div id="footerWrapper"></div>
+    <script src="../_themes/javascript/052334480c38757b048e.rest.js"></script>
+  </body>
+</html>

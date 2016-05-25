@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{ metadata }}
+    {% if page._op_canonicalUrl != null  %}<link href="{{ page._op_canonicalUrl}}" rel="canonical">{% endif %}
+    <title>{{ page.title }}</title>
+    {% style _themes/css/052334480c38757b048e.reference.css %}
+  </head>
+  <body>
+
+    {% include header.html %}
+
+    <div class="reference">
+      <!-- Toc -->
+      <div id="sidebar" class="reference-toc" ms.cmpgrp="intopic toc">
+        <nav class="navigation" role="navigation"></nav>
+      </div>
+
+      <div class="reference-body-outer">
+        <!-- Content -->
+        <div id="main" class="reference-body" ms.pgarea="body" role="main">
+          <div id="menu-bar">
+	          <nav class="navbar reference-nav">
+	            <ul class="navbar-left" ms.cmpgrp="social">
+	              {% if page.source_url != null and page.source_url != blank %}
+	              <li class="navbar-item">
+	                <a href="{{ page.source_url}}" class="button is-primary is-small"><i class="icon icon-code"></i>{% loc view.source %}</a>
+	              </li>
+	              {% endif %}
+	              <li class="navbar-item">
+	                <a href="#" class="button is-primary is-small sharebutton"><i class="icon icon-share"></i>{% loc share %}</a>
+	              </li>
+	            </ul>
+	            <div class="navbar-left" ms.cmpgrp="reference menu">
+	              <!-- Platform Selector -->
+	              {% if page.platforms != null %}
+	              <div class="navbar-item">
+	                <p class="control is-horizontal">
+	                  <label for="platform-selector" class="label">{% loc platform %}</label>
+	                  <select name="platform-selector" id="platform-selector">
+	                  {% for platform in page.platforms %}
+	                    <option value="platform-{{ platform }}">{{ platform }}</option>
+	                  {% endfor %}
+	                  </select>
+	                </p>
+	              </div>
+	              {% endif %}
+	              <!-- Language Selector -->
+	              {% if page.langs != null %}
+	              <div class="navbar-item">
+	                <p id="menu-lang" class="control is-horizontal">
+	                  <label for="lang-selector" class="label">{% loc language %}</label>
+	                  <select name="lang-selector" id="lang-selector">
+	                  {% for lang in page.langs %}
+	                    <option value="lang-{{ lang }}">{{ lang }}</option>
+	                  {% endfor %}
+	                  </select>
+	                </p>
+	              </div>
+	              {% endif %}
+	              <!-- Theme Selector -->
+	              <div class="navbar-item">
+	                <p id="menu-theme" class="control is-horizontal">
+	                  <label for="theme-selector" class="label">{% loc theme %}</label>
+	                  <select name="theme-selector" id="theme-selector">
+	                    <option value="">{% loc theme.light %}</option>
+	                    <option value="theme-night">{% loc theme.dark %}</option>
+	                  </select>
+	                </p>
+	              </div>
+	            </div>
+	          </nav>
+          </div>
+	        <div id="menu-expand">
+	          <h6>
+	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
+	        </div>
+	        <div id="menu-nav" class="dropdown-container">
+	          <div class="dropdown dropdown-full mobilenavi">
+	            <select>
+	            </select>
+	          </div>
+	        </div>
+          <div class="share-container">
+            <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>{% loc twitter %}</a></div>
+            <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>{% loc facebook %}</a></div>
+            <!--<div><a href="" class="share-slack"><i class="icon icon-slack"></i>{% loc slack %}</a></div>-->
+          </div>
+
+          <article id="main-content" class="reference-content">
+          {{ content }}
+          </article>
+          
+          {% if page.product_feedback_displaytext != null && page.product_feedback_url != null %}
+            <div class="product-feedback">
+              <span>{% loc product.feedback %}</span>
+              <a href="{{ page.product_feedback_url }}">{{ page.product_feedback_displaytext }}</a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+
+    <div id="footerWrapper"></div>
+    {% js _themes/javascript/052334480c38757b048e.reference.js %}
+  </body>
+</html>

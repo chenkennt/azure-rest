@@ -1,0 +1,7030 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="documentType" content="RestApi" />
+<meta name="version" content="0" />
+<meta name="locale" content="en-us" />
+<meta name="layout" content="Rest" />
+<meta name="pagetype" content="REST" />
+<meta name="langs" content="http" />
+<meta name="toc_rel" content="../TOC.json" />
+<meta name="breadcrumb_path" content="/toc.html" />
+
+    
+    <title>ServiceFabricClient</title>
+    <link rel="stylesheet" href="../_themes/css/052334480c38757b048e.restapi.css">
+  </head>
+  <body>
+
+    <header id="header" ms.pgarea="header">
+    <div id="cookie-consent-section" class="banner">
+        <div class="row">
+            <div class="left" id="cookie.consent.europe"></div>
+            <div class="middle"><a id="privacystatement-link" tabindex="1" href="#"></a></div>
+            <div class="right"><a tabindex="1" id="close"></a></div>
+        </div>
+    </div>
+  <div id="common-nav-placeholder">
+    <div class="container" role="banner">
+      <a href="https://docs.microsoft.com/"><p class="mslogo" id="microsoft">&nbsp;</p></a>
+      <!-- Disable lang picker temporarily -->
+      <div class="lang-picker lang-hover" style="display:none"><span class="selected-lang"></span><i class="arrow"></i></div>
+      <div class="lang-list lang-hover" style="display:none;">
+         <div class="three-column-container">
+             <div class="three-column-inner">
+                 <div class="three-column-1" >
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-2">
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-3" >
+                     <ul></ul>
+                 </div>
+             </div>
+         </div>
+         <div class="two-column-container" >
+             <div class="two-column-1">
+                 <ul></ul>
+             </div>
+             <div class="two-column-2">
+                 <ul></ul>
+             </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">
+    <ul class="breadcrumbs"></ul>
+    <ul class="headerlink">
+        <li><a href="https://aka.ms/abouttechnicaldocs" id="subheader.aboutdocs"></a></li>
+    </ul>
+  </div>
+
+  </div>
+</header>
+
+    <div class="reference">
+      <!-- Toc -->
+      <div id="sidebar" class="reference-toc" ms.cmpgrp="intopic toc">
+        <nav class="navigation"></nav>
+      </div>
+
+      <div class="reference-body-outer">
+        <!-- Content -->
+        <div id="main" class="reference-body" ms.pgarea="body">
+          <div id="menu-bar">
+            <nav class="navbar reference-nav">
+                <ul class="navbar-left" ms.cmpgrp="social">
+                  
+	              <li class="navbar-item">
+                    <a href="#" class="button is-primary is-small sharebutton"><i class="icon icon-share"></i>Share</a>
+                  </li>
+                </ul>
+                <div class="navbar-left" ms.cmpgrp="reference menu">
+                  <!-- Platform Selector -->
+                  
+                  <!-- Language Selector -->
+                  
+                  <div class="navbar-item">
+                    <p id="menu-lang" class="control is-horizontal">
+                      <label for="lang-selector" class="label">Language</label>
+                      <select name="lang-selector" id="lang-selector">
+                      
+                        <option value="lang-http">http</option>
+                      
+                      </select>
+                    </p>
+                  </div>
+                  
+                  <!-- Theme Selector -->
+                  <div class="navbar-item">
+                    <p id="menu-theme" class="control is-horizontal">
+                      <label for="theme-selector" class="label">Theme</label>
+                      <select name="theme-selector" id="theme-selector">
+                        <option value="">Light</option>
+                        <option value="theme-night">Dark</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+              </nav>
+          </div>
+	        <div id="menu-expand">
+	          <h6>
+	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
+	        </div>
+	        <div id="menu-nav" class="dropdown-container">
+	          <div class="dropdown dropdown-full mobilenavi">
+	            <select>
+	            </select>
+	          </div>
+	        </div>
+          <div class="share-container">
+            <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+            <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+          </div>
+
+              <article id="main-content" class="reference-content">
+                  
+
+<header class="header" id="overview">
+  <h2 id="localhost_10710_ServiceFabricClient_1_0_0" data-uid="localhost:10710/ServiceFabricClient/1.0.0">ServiceFabricClient</h2>
+</header>
+<header class="header" id="GetClusterManifest">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetClusterManifest" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetClusterManifest"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /$/GetClusterManifest?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The cluster manifest
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetClusterManifest"></div>
+  </section>
+</div>
+<header class="header" id="SendClusterHealthReport">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendClusterHealthReport" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendClusterHealthReport"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /$/ReportClusterHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>clusterHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the cluster health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The cluster health report
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendClusterHealthReport"></div>
+  </section>
+</div>
+<header class="header" id="GetNodeList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetNodeList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetNodeList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes?api-version[&amp;continuation-token]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>continuation-token</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The token of the continuation
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node array
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetNodeList"></div>
+  </section>
+</div>
+<header class="header" id="GetNode">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetNode" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetNode"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}?api-version[&amp;continuation-token]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>continuation-token</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The token of the continuation
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetNode"></div>
+  </section>
+</div>
+<header class="header" id="EnableNode">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_EnableNode" data-uid="localhost:10710/ServiceFabricClient/1.0.0/EnableNode"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Nodes/{nodeName}/$/Activate?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="EnableNode"></div>
+  </section>
+</div>
+<header class="header" id="DisableNode">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_DisableNode" data-uid="localhost:10710/ServiceFabricClient/1.0.0/DisableNode"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Nodes/{nodeName}/$/Deactivate?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>disableNode</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The node of the disable
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>DeactivationIntent</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="DisableNode"></div>
+  </section>
+</div>
+<header class="header" id="RemoveNodeState">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_RemoveNodeState" data-uid="localhost:10710/ServiceFabricClient/1.0.0/RemoveNodeState"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Nodes/{nodeName}/$/RemoveNodeState?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node state
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="RemoveNodeState"></div>
+  </section>
+</div>
+<header class="header" id="GetNodeHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetNodeHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetNodeHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetHealth?api-version[&amp;EventsHealthStateFilter]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>EventsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the events health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetNodeHealth"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedApplicationList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedApplicationList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedApplicationList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed application list
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedApplicationList"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedApplication">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedApplication" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedApplication"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed application
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedApplication"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedApplicationHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedApplicationHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedApplicationHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/GetHealth?api-version[&amp;EventsHealthStateFilter&amp;DeployedServicePackagesHealthStateFilter]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>EventsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the events health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>DeployedServicePackagesHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the deployed service packages health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed application health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedApplicationHealth"></div>
+  </section>
+</div>
+<header class="header" id="GetNodeLoadInformation">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetNodeLoadInformation" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetNodeLoadInformation"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetLoadInformation?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node load information
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetNodeLoadInformation"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedCodePackage">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedCodePackage" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedCodePackage"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/GetCodePackages?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed code package
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedCodePackage"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedReplica">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedReplica" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedReplica"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/GetReplicas?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed replica
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedReplica"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedReplicaDetail">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedReplicaDetail" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedReplicaDetail"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetPartitions/{partitionName}/$/GetReplicas/{replicaId}/$/GetDetail?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>replicaId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the replica
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed replica detail
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedReplicaDetail"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedServicePackage">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedServicePackage" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedServicePackage"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/GetServicePackages?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed service package
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedServicePackage"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedServicePackageHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedServicePackageHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedServicePackageHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/GetServicePackages/{servicePackageName}/$/GetHealth?api-version[&amp;EventsHealthStateFilter]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>servicePackageName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service package
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>EventsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the events health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed service package health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedServicePackageHealth"></div>
+  </section>
+</div>
+<header class="header" id="GetDeployedServiceType">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetDeployedServiceType" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetDeployedServiceType"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/GetServiceTypes?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed service type
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetDeployedServiceType"></div>
+  </section>
+</div>
+<header class="header" id="SendNodeHealthReport">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendNodeHealthReport" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendNodeHealthReport"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Nodes/{nodeName}/$/ReportHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the node health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The node health report
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendNodeHealthReport"></div>
+  </section>
+</div>
+<header class="header" id="SendDeployedApplicationHealthReport">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendDeployedApplicationHealthReport" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendDeployedApplicationHealthReport"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/ReportHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>deployedApplicationHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the deployed application health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed application health report
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendDeployedApplicationHealthReport"></div>
+  </section>
+</div>
+<header class="header" id="SendDeployedServicePackageHealthReport">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendDeployedServicePackageHealthReport" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendDeployedServicePackageHealthReport"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Nodes/{nodeName}/$/GetApplications/{applicationName}/$/GetServicePackages/{serviceManifestName}/$/ReportHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>nodeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the node
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceManifestName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service manifest
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>deployedServicePackageHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the deployed service package health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The deployed service package health report
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendDeployedServicePackageHealthReport"></div>
+  </section>
+</div>
+<header class="header" id="GetApplicationTypeList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetApplicationTypeList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetApplicationTypeList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /ApplicationTypes?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application type
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetApplicationTypeList"></div>
+  </section>
+</div>
+<header class="header" id="GetApplicationType">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetApplicationType" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetApplicationType"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /ApplicationTypes/{applicationTypeName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationTypeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application type
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetApplicationType"></div>
+  </section>
+</div>
+<header class="header" id="GetServiceManifest">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetServiceManifest" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetServiceManifest"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /ApplicationTypes/{applicationTypeName}/$/GetServiceManifest?ApplicationTypeVersion&amp;ServiceManifestName&amp;api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationTypeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>ApplicationTypeVersion</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>ServiceManifestName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service manifest
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service manifest
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetServiceManifest"></div>
+  </section>
+</div>
+<header class="header" id="GetServiceType">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetServiceType" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetServiceType"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /ApplicationTypes/{applicationTypeName}/$/GetServiceTypes?ApplicationTypeVersion&amp;api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationTypeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>ApplicationTypeVersion</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service type
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetServiceType"></div>
+  </section>
+</div>
+<header class="header" id="GetApplicationManifest">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetApplicationManifest" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetApplicationManifest"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /ApplicationTypes/{applicationTypeName}/$/GetApplicationManifest?ApplicationTypeVersion&amp;api-version[&amp;continuation-token]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationTypeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>ApplicationTypeVersion</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>continuation-token</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The token of the continuation
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application manifest
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetApplicationManifest"></div>
+  </section>
+</div>
+<header class="header" id="RegisterApplicationType">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_RegisterApplicationType" data-uid="localhost:10710/ServiceFabricClient/1.0.0/RegisterApplicationType"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /ApplicationTypes/$/Provision?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>RegisterApplicationType</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The type of the register application
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ApplicationTypeBuildPath</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application type
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="RegisterApplicationType"></div>
+  </section>
+</div>
+<header class="header" id="UnregisterApplicationType">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_UnregisterApplicationType" data-uid="localhost:10710/ServiceFabricClient/1.0.0/UnregisterApplicationType"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /ApplicationTypes/{applicationTypeName}/$/Unprovision?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationTypeName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application type
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>UnregisterApplicationType</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The type of the unregister application
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ApplicationTypeVersion</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application type
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="UnregisterApplicationType"></div>
+  </section>
+</div>
+<header class="header" id="GetApplicationList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetApplicationList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetApplicationList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications?api-version[&amp;continuation-token]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>continuation-token</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The token of the continuation
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetApplicationList"></div>
+  </section>
+</div>
+<header class="header" id="GetApplication">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetApplication" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetApplication"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications/{applicationName}?api-version[&amp;continuation-token]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>continuation-token</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The token of the continuation
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetApplication"></div>
+  </section>
+</div>
+<header class="header" id="GetServiceList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetServiceList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetServiceList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications/{applicationName}/$/GetServices?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetServiceList"></div>
+  </section>
+</div>
+<header class="header" id="GetService">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetService" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetService"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications/{applicationName}/$/GetServices/{serviceName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetService"></div>
+  </section>
+</div>
+<header class="header" id="GetServiceGroupDescription">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetServiceGroupDescription" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetServiceGroupDescription"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications/{applicationName}/$/GetServices/{serviceName}/$/GetServiceGroupDescription?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service group description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetServiceGroupDescription"></div>
+  </section>
+</div>
+<header class="header" id="GetServiceGroupMember">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetServiceGroupMember" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetServiceGroupMember"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications/{applicationName}/$/GetServices/{serviceName}/$/GetServiceGroupMembers?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service group description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetServiceGroupMember"></div>
+  </section>
+</div>
+<header class="header" id="GetApplicationHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetApplicationHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetApplicationHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications/{applicationName}/$/GetHealth?api-version[&amp;EventsHealthStateFilter&amp;DeployedApplicationsHealthStateFilter]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>EventsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the events health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>DeployedApplicationsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the deployed application health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetApplicationHealth"></div>
+  </section>
+</div>
+<header class="header" id="GetApplicationUpgrade">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetApplicationUpgrade" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetApplicationUpgrade"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Applications/{applicationName}/$/GetUpgradeProgress?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application upgrade
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetApplicationUpgrade"></div>
+  </section>
+</div>
+<header class="header" id="SendApplicationHealthReport">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendApplicationHealthReport" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendApplicationHealthReport"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/ReportHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the application health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application health report
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendApplicationHealthReport"></div>
+  </section>
+</div>
+<header class="header" id="NewApplication">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_NewApplication" data-uid="localhost:10710/ServiceFabricClient/1.0.0/NewApplication"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/$/Create?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationDescription</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The description of the application
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Name</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TypeName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TypeVersion</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ParameterList</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+                  
+                  
+                  <p>
+                    <a class="child-toggle">view child properties</a>
+                  </p>
+                  <ul class="member-details">
+                    <li>
+                      <ol class="meta">
+                        <li>
+                        <code>Key</code>
+                        </li>
+                        <li>
+                          <code>string</code>
+                        </li>
+                      </ol>
+                      <section class="description">
+                        
+                      </section>
+                    </li>
+                    <li>
+                      <ol class="meta">
+                        <li>
+                        <code>Value</code>
+                        </li>
+                        <li>
+                          <code>string</code>
+                        </li>
+                      </ol>
+                      <section class="description">
+                        
+                      </section>
+                    </li>
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application description
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application description
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="NewApplication"></div>
+  </section>
+</div>
+<header class="header" id="NewService">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_NewService" data-uid="localhost:10710/ServiceFabricClient/1.0.0/NewService"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/GetServices/$/Create?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceDescription</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The description of the service
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceKind</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ApplicationName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceTypeName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>PartitionDescription</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>PlacementConstraints</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>CorrelationScheme</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceLoadMetrics</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServicePlacementPolicies</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Flags</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="NewService"></div>
+  </section>
+</div>
+<header class="header" id="NewServiceFromTemplate">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_NewServiceFromTemplate" data-uid="localhost:10710/ServiceFabricClient/1.0.0/NewServiceFromTemplate"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/GetServices/$/CreateFromTemplate?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceDescriptionTemplate</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The template of the service description
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceTypeName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description template
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description template
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description template
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="NewServiceFromTemplate"></div>
+  </section>
+</div>
+<header class="header" id="NewServiceGroup">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_NewServiceGroup" data-uid="localhost:10710/ServiceFabricClient/1.0.0/NewServiceGroup"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/GetServices/$/CreateServiceGroup?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service group
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceGroupDescription</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The description of the service group
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceKind</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ApplicationName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceTypeName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>PartitionDescription</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>PlacementConstraints</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>CorrelationScheme</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceLoadMetrics</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServicePlacementPolicies</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Flags</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceGroupMemberDescription</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+                  
+                  
+                  <p>
+                    <a class="child-toggle">view child properties</a>
+                  </p>
+                  <ul class="member-details">
+                    <li>
+                      <ol class="meta">
+                        <li>
+                        <code>ServiceName</code>
+                        </li>
+                        <li>
+                          <code>string</code>
+                        </li>
+                      </ol>
+                      <section class="description">
+                        
+                      </section>
+                    </li>
+                    <li>
+                      <ol class="meta">
+                        <li>
+                        <code>ServiceTypeName</code>
+                        </li>
+                        <li>
+                          <code>string</code>
+                        </li>
+                      </ol>
+                      <section class="description">
+                        
+                      </section>
+                    </li>
+                    <li>
+                      <ol class="meta">
+                        <li>
+                        <code>ServiceKind</code>
+                        </li>
+                        <li>
+                          <code>integer</code>
+                        </li>
+                      </ol>
+                      <section class="description">
+                        
+                      </section>
+                    </li>
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="NewServiceGroup"></div>
+  </section>
+</div>
+<header class="header" id="NewServiceGroupFromTemplate">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_NewServiceGroupFromTemplate" data-uid="localhost:10710/ServiceFabricClient/1.0.0/NewServiceGroupFromTemplate"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/GetServiceGroups/$/CreateServiceGroupFromTemplate?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceDescriptionTemplate</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The template of the service description
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceTypeName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service group description template
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service group description template
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service group description template
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="NewServiceGroupFromTemplate"></div>
+  </section>
+</div>
+<header class="header" id="UpdateServiceGroup">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_UpdateServiceGroup" data-uid="localhost:10710/ServiceFabricClient/1.0.0/UpdateServiceGroup"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/GetServices/{serviceName}/$/UpdateServiceGroup?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceGroupUpdateDescription</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The description of the service group update
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceKind</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Flags</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service group update description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="UpdateServiceGroup"></div>
+  </section>
+</div>
+<header class="header" id="RemoveApplication">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_RemoveApplication" data-uid="localhost:10710/ServiceFabricClient/1.0.0/RemoveApplication"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/Delete?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="RemoveApplication"></div>
+  </section>
+</div>
+<header class="header" id="StartApplicationUpgrade">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_StartApplicationUpgrade" data-uid="localhost:10710/ServiceFabricClient/1.0.0/StartApplicationUpgrade"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/Upgrade?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>startApplicationUpgradeDescription</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The description of the start application upgrade
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Name</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TargetApplicationTypeVersion</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Parameters</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>UpgradeKind</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RollingUpgradeMode</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>UpgradeReplicaSetCheckTimeoutInSeconds</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ForceRestart</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>MonitoringPolicy</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ApplicationHealthPolicy</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The start application upgrade
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="StartApplicationUpgrade"></div>
+  </section>
+</div>
+<header class="header" id="UpdateApplicationUpgrade">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_UpdateApplicationUpgrade" data-uid="localhost:10710/ServiceFabricClient/1.0.0/UpdateApplicationUpgrade"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/UpdateUpgrade?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>updateApplicationUpgradeDescription</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The description of the application upgrade
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Name</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>UpgradeKind</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>UpdateDescription</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ApplicationHealthPolicy</code>
+                </li>
+                <li>
+                  <code>object</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The update application upgrade
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="UpdateApplicationUpgrade"></div>
+  </section>
+</div>
+<header class="header" id="ResumeApplicationUpgrade">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_ResumeApplicationUpgrade" data-uid="localhost:10710/ServiceFabricClient/1.0.0/ResumeApplicationUpgrade"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/MoveNextUpgradeDomain?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resumeApplicationUpgrade</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The upgrade of the resume application
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>UpgradeDomainName</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The resume application upgrade
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="ResumeApplicationUpgrade"></div>
+  </section>
+</div>
+<header class="header" id="StartApplicationUpgradeRollback">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_StartApplicationUpgradeRollback" data-uid="localhost:10710/ServiceFabricClient/1.0.0/StartApplicationUpgradeRollback"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/RollbackUpgrade?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The application upgrade rollback
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="StartApplicationUpgradeRollback"></div>
+  </section>
+</div>
+<header class="header" id="UpdateService">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_UpdateService" data-uid="localhost:10710/ServiceFabricClient/1.0.0/UpdateService"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Services/{serviceName}/$/Update?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceUpdateDescription</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The description of the service update
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>ServiceKind</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Flags</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service update description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="UpdateService"></div>
+  </section>
+</div>
+<header class="header" id="RemoveService">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_RemoveService" data-uid="localhost:10710/ServiceFabricClient/1.0.0/RemoveService"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Services/{serviceName}/$/Delete?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="RemoveService"></div>
+  </section>
+</div>
+<header class="header" id="RemoveServiceGroup">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_RemoveServiceGroup" data-uid="localhost:10710/ServiceFabricClient/1.0.0/RemoveServiceGroup"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Applications/{applicationName}/$/GetServiceGroups/{serviceName}/$/Delete?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>applicationName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the application
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="RemoveServiceGroup"></div>
+  </section>
+</div>
+<header class="header" id="GetServiceDescription">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetServiceDescription" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetServiceDescription"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Services/{serviceName}/$/GetDescription?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service description
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetServiceDescription"></div>
+  </section>
+</div>
+<header class="header" id="ResolveService">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_ResolveService" data-uid="localhost:10710/ServiceFabricClient/1.0.0/ResolveService"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Services/{serviceName}/$/ResolvePartition?api-version[&amp;PartitionKeyType&amp;PartitionKeyValue&amp;PreviousRspVersion]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>PartitionKeyType</code>
+        </li>
+        <li>
+          <code>integer</code>
+        </li>
+      </ol>
+      <section class="description">
+        The type of the partition key
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>PartitionKeyValue</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The value of the partition key
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>PreviousRspVersion</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the previous rsp
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The partition
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="ResolveService"></div>
+  </section>
+</div>
+<header class="header" id="GetServiceHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetServiceHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetServiceHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Services/{serviceName}/$/GetHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetServiceHealth"></div>
+  </section>
+</div>
+<header class="header" id="SendServiceHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendServiceHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendServiceHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Services/{serviceName}/$/ReportHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the service health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The service health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendServiceHealth"></div>
+  </section>
+</div>
+<header class="header" id="GetPartitionList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetPartitionList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetPartitionList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Services/{serviceName}/$/GetPartitions?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The partitions
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetPartitionList"></div>
+  </section>
+</div>
+<header class="header" id="GetPartition">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetPartition" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetPartition"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Services/{serviceName}/$/GetPartitions/{partitionId}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The partitions
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetPartition"></div>
+  </section>
+</div>
+<header class="header" id="RepairPartitionList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_RepairPartitionList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/RepairPartitionList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Services/{serviceName}/$/GetPartitions/$/Recover?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>serviceName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the service
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The repair partition
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="RepairPartitionList"></div>
+  </section>
+</div>
+<header class="header" id="RepairPartition">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_RepairPartition" data-uid="localhost:10710/ServiceFabricClient/1.0.0/RepairPartition"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Partitions/{partitionId}/$/Recover?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The repair partition
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="RepairPartition"></div>
+  </section>
+</div>
+<header class="header" id="ResetPartitionLoad">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_ResetPartitionLoad" data-uid="localhost:10710/ServiceFabricClient/1.0.0/ResetPartitionLoad"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Partitions/{partitionId}/$/ResetLoad?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The reset partition load
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="ResetPartitionLoad"></div>
+  </section>
+</div>
+<header class="header" id="GetReplicaList">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetReplicaList" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetReplicaList"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Partitions/{partitionId}/$/GetReplicas?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The replica
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetReplicaList"></div>
+  </section>
+</div>
+<header class="header" id="GetReplica">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetReplica" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetReplica"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Partitions/{partitionId}/$/GetReplicas/{replicaId}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>replicaId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the replica
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The replica
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetReplica"></div>
+  </section>
+</div>
+<header class="header" id="GetPartitionHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetPartitionHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetPartitionHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Partitions/{partitionId}/$/GetHealth?api-version[&amp;EventsHealthStateFilter&amp;ReplicasHealthStateFilter]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>EventsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the events health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>ReplicasHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the replicas health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The partition health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetPartitionHealth"></div>
+  </section>
+</div>
+<header class="header" id="SendPartitionHealthReport">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendPartitionHealthReport" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendPartitionHealthReport"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Partitions/{partitionId}/$/ReportHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the partition health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The partition health report
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendPartitionHealthReport"></div>
+  </section>
+</div>
+<header class="header" id="GetReplicaHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetReplicaHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetReplicaHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Partitions/{partitionId}/$/GetReplicas/{replicaId}/$/GetHealth?api-version[&amp;EventsHealthStateFilter]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>replicaId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the replica
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>EventsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the events health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The replica health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetReplicaHealth"></div>
+  </section>
+</div>
+<header class="header" id="SendReplicaHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_SendReplicaHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/SendReplicaHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /Partitions/{partitionId}/$/GetReplicas/{replicaId}/$/ReportHealth?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>replicaId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the replica
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>replicaHealthReport</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The report of the replica health
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SourceId</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Property</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>HealthState</code>
+                </li>
+                <li>
+                  <code>integer</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>Description</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>TimeToLiveInMilliSeconds</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>SequenceNumber</code>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>RemoveWhenExpired</code>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The replica health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="SendReplicaHealth"></div>
+  </section>
+</div>
+<header class="header" id="GetPartitionLoadInformation">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetPartitionLoadInformation" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetPartitionLoadInformation"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Partitions/{partitionId}/$/GetLoadInformation?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The partition load information
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetPartitionLoadInformation"></div>
+  </section>
+</div>
+<header class="header" id="GetReplicaLoadInformation">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetReplicaLoadInformation" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetReplicaLoadInformation"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /Partitions/{partitionId}/$/GetReplicas/{replicaId}/$/GetLoadInformation?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>partitionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the partition
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>replicaId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The id of the replica
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The replica load information
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetReplicaLoadInformation"></div>
+  </section>
+</div>
+<header class="header" id="GetClusterLoadInformation">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetClusterLoadInformation" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetClusterLoadInformation"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /$/GetLoadInformation?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The load information
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetClusterLoadInformation"></div>
+  </section>
+</div>
+<header class="header" id="GetClusterHealth">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetClusterHealth" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetClusterHealth"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /$/GetClusterHealth?api-version[&amp;EventsHealthStateFilter&amp;NodesHealthStateFilter&amp;ApplicationsHealthStateFilter]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>EventsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the events health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>NodesHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the nodes health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>ApplicationsHealthStateFilter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter of the applications health state
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The cluster health
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetClusterHealth"></div>
+  </section>
+</div>
+<header class="header" id="GetUpgradeProgress">
+  <div class="primary">
+  <h3 id="localhost_10710_ServiceFabricClient_1_0_0_GetUpgradeProgress" data-uid="localhost:10710/ServiceFabricClient/1.0.0/GetUpgradeProgress"></h3>
+  
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /$/GetUpgradeProgress?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The version of the api
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          The upgrade progress
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="ServiceFabric.swagger.json" data-api-operation-id="GetUpgradeProgress"></div>
+  </section>
+</div>
+
+              </article>
+
+          
+      </div>
+    </div>
+    </div>
+    <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+    <div id="footerWrapper"></div>
+    <script src="../_themes/javascript/052334480c38757b048e.rest.js"></script>
+  </body>
+</html>

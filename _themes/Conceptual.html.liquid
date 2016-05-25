@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{ metadata }}
+    {% if page._op_canonicalUrl  %}<link href="{{ page._op_canonicalUrl }}" rel="canonical">{% endif %}
+    <title>{{ page.title }}</title>
+    {% style _themes/css/052334480c38757b048e.conceptual.css %}
+  </head>
+  <body>
+
+    {% include header.html %}
+
+    <div class="container" ms.pgarea="body">
+
+      <aside id="social" ms.cmpgrp="social" role="complementary">
+        <ol class="social-actions">
+          <li class="menu-theme">
+            <div class="dropdown-container">
+              <div class="dropdown">
+                <select aria-label="{% loc theme %}" id="theme-selector">
+                  <option value="">{% loc theme.light %}</option>
+                  <option value="theme-night">{% loc theme.dark %}</option>
+                </select>
+              </div>
+            </div>
+          </li>
+          {% assign contentLocale = page.locale | downcase %}
+          {% if contentLocale == null or contentLocale == blank or contentLocale == 'en-us' %}
+          <li><a href="#comments-container" class="button is-primary is-small" id="comments-link"><i class="icon icon-comments"></i>{% loc comments %}</a></li>
+          {% endif %}
+          <li><a href="{{ page.content_git_url }}" title="{% loc editdesc %}" class="button is-primary is-small"><i class="icon icon-editor"></i>{% loc edit %}</a></li>
+          <li>
+            <a href="#" class="button is-primary is-small sharebutton" title="{% loc sharedesc %}"><i class="icon icon-share"></i>{% loc share %}</a>
+            <div class="share-container">
+              <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>{% loc twitter %}</a></div>
+              <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>{% loc facebook %}</a></div>
+              <!--<div><a href="" class="share-slack"><i class="icon icon-slack"></i>{% loc slack %}</a></div>-->
+            </div>
+          </li>
+        </ol>
+
+        <div id="menu-expand">
+          <h6><span id="menu-expand-icon">+ </span>Options</h6>
+        </div>
+      </aside>
+
+      <div id="toc" ms.cmpgrp="left toc" role="navigation" aria-label="main navigation">
+        <nav id="sidebar"></nav>
+      </div>
+
+      <div id="menu-nav" class="dropdown-container">
+        <div class="dropdown dropdown-full mobilenavi">
+          <select>
+          </select>
+        </div>
+      </div>
+
+      <div id="main" role="main">
+        {{ page._op_rawTitle }}
+        <div id="metadata" ms.cmpgrp="page info">
+          <a href="{{ page._op_gitContributorInformation.author.profile_url }}" class="avatar" title="{{ page._op_gitContributorInformation.author.display_name }}">
+            <span class="author-name" style="background-image: url({{ page._op_gitContributorInformation.author.profile_url }}.png)" alt="{% loc author.name %}"></span>
+          </a>
+          <div class="info">
+            <span class="name"><a href="{{ page._op_gitContributorInformation.author.profile_url }}">{{ page._op_gitContributorInformation.author.display_name}}</a></span>
+            <div class="meta">
+              <time datetime="" class="date">{{ page._op_gitContributorInformation.update_at }}</time>
+              <time datetime="" class="reading-time">{% if page._op_wordCount < 200 %} 1{% else %}{{ page._op_wordCount | divided_by: 200 }}{% endif %} {% loc min.to.read %}</time>
+              {% if page._op_gitContributorInformation.contributors and page._op_gitContributorInformation.contributors.length > 0 %}
+              <span class="contributors-text">{% loc contributors %}</span>
+              <ul class="contributors">
+                {% for contributor in page._op_gitContributorInformation.contributors %}
+                <li><a href="{{ contributor.profile_url }}" title="{{ contributor.display_name }}"><span style="background-image: url({{ contributor.profile_url }}.png)" alt="{{ contributor.display_name }}" class="contributor-avatar"></span></a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+        <aside class="toc" ms.cmpgrp="intopic toc" role="navigation" aria-label="On page navigation">
+          <h5>{% loc in.this.article %}</h5>
+        </aside>
+
+        {{ content }}
+
+        {% if page.product_feedback_displaytext and page.product_feedback_url %}
+          <div class="product-feedback">
+            <span>{% loc product.feedback %}</span>
+            <a href="{{ page.product_feedback_url }}">{{ page.product_feedback_displaytext }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div id="openFeedbackContainer" class="openfeedback-container" role="complementary"></div>
+    <div class="container">
+        <div id="comments-container" role="form"> </div>
+    </div>
+
+    <div id="footerWrapper"></div>
+
+    {% js _themes/javascript/052334480c38757b048e.conceptual.js %}
+  </body>
+</html>

@@ -1,0 +1,5946 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="consumes" content="application/json,text/json" />
+<meta name="produces" content="application/json,text/json" />
+<meta name="security" content="{
+  &quot;azure_auth&quot;: [
+    &quot;user_impersonation&quot;
+  ]
+}" />
+<meta name="securityDefinitions" content="{
+  &quot;azure_auth&quot;: {
+    &quot;type&quot;: &quot;oauth2&quot;,
+    &quot;authorizationUrl&quot;: &quot;https://login.microsoftonline.com/common/oauth2/authorize&quot;,
+    &quot;flow&quot;: &quot;implicit&quot;,
+    &quot;description&quot;: &quot;Azure Active Directory OAuth2 Flow&quot;,
+    &quot;scopes&quot;: {
+      &quot;user_impersonation&quot;: &quot;impersonate your user account&quot;
+    }
+  }
+}" />
+<meta name="documentType" content="RestApi" />
+<meta name="version" content="0" />
+<meta name="locale" content="en-us" />
+<meta name="layout" content="Rest" />
+<meta name="pagetype" content="REST" />
+<meta name="langs" content="http" />
+<meta name="toc_rel" content="../TOC.json" />
+<meta name="breadcrumb_path" content="/toc.html" />
+
+    
+    <title>ComputeManagementClient</title>
+    <link rel="stylesheet" href="../_themes/css/052334480c38757b048e.restapi.css">
+  </head>
+  <body>
+
+    <header id="header" ms.pgarea="header">
+    <div id="cookie-consent-section" class="banner">
+        <div class="row">
+            <div class="left" id="cookie.consent.europe"></div>
+            <div class="middle"><a id="privacystatement-link" tabindex="1" href="#"></a></div>
+            <div class="right"><a tabindex="1" id="close"></a></div>
+        </div>
+    </div>
+  <div id="common-nav-placeholder">
+    <div class="container" role="banner">
+      <a href="https://docs.microsoft.com/"><p class="mslogo" id="microsoft">&nbsp;</p></a>
+      <!-- Disable lang picker temporarily -->
+      <div class="lang-picker lang-hover" style="display:none"><span class="selected-lang"></span><i class="arrow"></i></div>
+      <div class="lang-list lang-hover" style="display:none;">
+         <div class="three-column-container">
+             <div class="three-column-inner">
+                 <div class="three-column-1" >
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-2">
+                     <ul></ul>
+                 </div>
+                 <div class="three-column-3" >
+                     <ul></ul>
+                 </div>
+             </div>
+         </div>
+         <div class="two-column-container" >
+             <div class="two-column-1">
+                 <ul></ul>
+             </div>
+             <div class="two-column-2">
+                 <ul></ul>
+             </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div id="sub-header" class="container" ms.cmpgrp="breadcrumb" role="navigation" aria-label="breadcrumb">
+    <ul class="breadcrumbs"></ul>
+    <ul class="headerlink">
+        <li><a href="https://aka.ms/abouttechnicaldocs" id="subheader.aboutdocs"></a></li>
+    </ul>
+  </div>
+
+  </div>
+</header>
+
+    <div class="reference">
+      <!-- Toc -->
+      <div id="sidebar" class="reference-toc" ms.cmpgrp="intopic toc">
+        <nav class="navigation"></nav>
+      </div>
+
+      <div class="reference-body-outer">
+        <!-- Content -->
+        <div id="main" class="reference-body" ms.pgarea="body">
+          <div id="menu-bar">
+            <nav class="navbar reference-nav">
+                <ul class="navbar-left" ms.cmpgrp="social">
+                  
+	              <li class="navbar-item">
+                    <a href="#" class="button is-primary is-small sharebutton"><i class="icon icon-share"></i>Share</a>
+                  </li>
+                </ul>
+                <div class="navbar-left" ms.cmpgrp="reference menu">
+                  <!-- Platform Selector -->
+                  
+                  <!-- Language Selector -->
+                  
+                  <div class="navbar-item">
+                    <p id="menu-lang" class="control is-horizontal">
+                      <label for="lang-selector" class="label">Language</label>
+                      <select name="lang-selector" id="lang-selector">
+                      
+                        <option value="lang-http">http</option>
+                      
+                      </select>
+                    </p>
+                  </div>
+                  
+                  <!-- Theme Selector -->
+                  <div class="navbar-item">
+                    <p id="menu-theme" class="control is-horizontal">
+                      <label for="theme-selector" class="label">Theme</label>
+                      <select name="theme-selector" id="theme-selector">
+                        <option value="">Light</option>
+                        <option value="theme-night">Dark</option>
+                      </select>
+                    </p>
+                  </div>
+                </div>
+              </nav>
+          </div>
+	        <div id="menu-expand">
+	          <h6>
+	             <h6><span id="menu-expand-icon">+ </span>Options</h6>
+	          </h6>
+	        </div>
+	        <div id="menu-nav" class="dropdown-container">
+	          <div class="dropdown dropdown-full mobilenavi">
+	            <select>
+	            </select>
+	          </div>
+	        </div>
+          <div class="share-container">
+            <div><a href="" class="share-twitter"><i class="icon icon-twitter"></i>Twitter</a></div>
+            <div><a href="" class="share-facebook"><i class="icon icon-facebook"></i>Facebook</a></div>
+          </div>
+
+              <article id="main-content" class="reference-content">
+                  
+
+<header class="header" id="overview">
+  <h2 id="management_azure_com_ComputeManagementClient_2015_06_15" data-uid="management.azure.com/ComputeManagementClient/2015-06-15">ComputeManagementClient</h2>
+</header>
+<header class="header" id="AvailabilitySets_CreateOrUpdate">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_AvailabilitySets_CreateOrUpdate" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/AvailabilitySets_CreateOrUpdate"></h3>
+  <p>The operation to create or update the availability set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{name}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the Create Availability Set operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the Create Availability Set operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                </li>
+              </ol>
+              <section class="description">
+                The instance view of a resource.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="AvailabilitySets_CreateOrUpdate"></div>
+  </section>
+</div>
+<header class="header" id="AvailabilitySets_Delete">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_AvailabilitySets_Delete" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/AvailabilitySets_Delete"></h3>
+  <p>The operation to delete the availability set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>availabilitySetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the availability set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="AvailabilitySets_Delete"></div>
+  </section>
+</div>
+<header class="header" id="AvailabilitySets_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_AvailabilitySets_Get" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/AvailabilitySets_Get"></h3>
+  <p>The operation to get the availability set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>availabilitySetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the availability set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="AvailabilitySets_Get"></div>
+  </section>
+</div>
+<header class="header" id="AvailabilitySets_List">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_AvailabilitySets_List" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/AvailabilitySets_List"></h3>
+  <p>The operation to list the availability sets.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="AvailabilitySets_List"></div>
+  </section>
+</div>
+<header class="header" id="AvailabilitySets_ListAvailableSizes">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_AvailabilitySets_ListAvailableSizes" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/AvailabilitySets_ListAvailableSizes"></h3>
+  <p>Lists all available virtual machine sizes that can be used to create a new virtual machine in an existing availability set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}/vmSizes?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>availabilitySetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the availability set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="AvailabilitySets_ListAvailableSizes"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineExtensionImages_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineExtensionImages_Get" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineExtensionImages_Get"></h3>
+  <p>Gets a virtual machine extension image.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers/{publisherName}/artifacttypes/vmextension/types/{type}/versions/{version}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine extension image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>publisherName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine extension image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>type</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine extension image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine extension image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineExtensionImages_Get"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineExtensionImages_ListTypes">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineExtensionImages_ListTypes" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineExtensionImages_ListTypes"></h3>
+  <p>Gets a list of virtual machine extension image types.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers/{publisherName}/artifacttypes/vmextension/types?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine extension image types.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>publisherName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine extension image types.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineExtensionImages_ListTypes"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineExtensionImages_ListVersions">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineExtensionImages_ListVersions" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineExtensionImages_ListVersions"></h3>
+  <p>Gets a list of virtual machine extension image versions.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers/{publisherName}/artifacttypes/vmextension/types/{type}/versions?api-version[&amp;$filter&amp;$top&amp;$orderby]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine extension image versions.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>publisherName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine extension image versions.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>type</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine extension image versions.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$filter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter to apply on the operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$top</code>
+        </li>
+        <li>
+          <code>integer</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine extension image versions.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$orderby</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine extension image versions.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineExtensionImages_ListVersions"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineExtensions_CreateOrUpdate">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineExtensions_CreateOrUpdate" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineExtensions_CreateOrUpdate"></h3>
+  <p>The operation to create or update the extension.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine where the extension should be create or updated.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmExtensionName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine extension.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>extensionParameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the Create Virtual Machine Extension operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                </li>
+              </ol>
+              <section class="description">
+                Describes the properties of a Virtual Machine Extension.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineExtensions_CreateOrUpdate"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineExtensions_Delete">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineExtensions_Delete" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineExtensions_Delete"></h3>
+  <p>The operation to delete the extension.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine where the extension should be deleted.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmExtensionName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine extension.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineExtensions_Delete"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineExtensions_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineExtensions_Get" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineExtensions_Get"></h3>
+  <p>The operation to get the extension.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName}?api-version[&amp;$expand]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine containing the extension.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmExtensionName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine extension.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$expand</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The expand expression to apply on the operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineExtensions_Get"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineImages_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineImages_Get" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineImages_Get"></h3>
+  <p>Gets a virtual machine image.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers/{publisherName}/artifacttypes/vmimage/offers/{offer}/skus/{skus}/versions/{version}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>publisherName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>offer</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>skus</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a virtual machine image.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineImages_Get"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineImages_List">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineImages_List" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineImages_List"></h3>
+  <p>Gets a list of virtual machine images.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers/{publisherName}/artifacttypes/vmimage/offers/{offer}/skus/{skus}/versions?api-version[&amp;$filter&amp;$top&amp;$orderby]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine images.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>publisherName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine images.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>offer</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine images.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>skus</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine images.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$filter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter to apply on the operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$top</code>
+        </li>
+        <li>
+          <code>integer</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine images.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$orderby</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine images.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineImages_List"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineImages_ListOffers">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineImages_ListOffers" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineImages_ListOffers"></h3>
+  <p>Gets a list of virtual machine image offers.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers/{publisherName}/artifacttypes/vmimage/offers?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine image offers.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>publisherName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine image offers.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineImages_ListOffers"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineImages_ListPublishers">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineImages_ListPublishers" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineImages_ListPublishers"></h3>
+  <p>Gets a list of virtual machine image publishers.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine image publishers.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineImages_ListPublishers"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineImages_ListSkus">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineImages_ListSkus" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineImages_ListSkus"></h3>
+  <p>Gets a list of virtual machine image skus.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/publishers/{publisherName}/artifacttypes/vmimage/offers/{offer}/skus?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine image skus.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>publisherName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine image skus.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>offer</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        <p>Gets a list of virtual machine image skus.</p>
+
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineImages_ListSkus"></div>
+  </section>
+</div>
+<header class="header" id="Usage_List">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_Usage_List" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/Usage_List"></h3>
+  <p>Lists compute usages for a subscription.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/usages?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The location upon which resource usage is queried.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="Usage_List"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineSizes_List">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineSizes_List" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineSizes_List"></h3>
+  <p>Lists all available virtual machine sizes for a subscription in a location.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/vmSizes?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>location</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The location upon which virtual-machine-sizes is queried.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineSizes_List"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Capture">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Capture" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Capture"></h3>
+  <p>Captures the VM by copying virtual hard disks of the VM and outputs a template that can be used to create similar VMs.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/capture?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the Capture Virtual Machine operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>vhdPrefix</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the captured VirtualHardDisk's name prefix.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>destinationContainerName</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>string</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the destination container name.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>overwriteVhds</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>boolean</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets whether it overwrites destination VirtualHardDisk if true, in case of conflict.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Capture"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_CreateOrUpdate">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_CreateOrUpdate" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_CreateOrUpdate"></h3>
+  <p>The operation to create or update a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the Create Virtual Machine operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>plan</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the purchase plan when deploying virtual machine from VM Marketplace images.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                </li>
+              </ol>
+              <section class="description">
+                Describes the properties of a Virtual Machine.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>resources</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets the virtual machine child extension resources.
+                  
+                  
+                  <p>
+                    <a class="child-toggle">view child properties</a>
+                  </p>
+                  <ul class="member-details">
+                    <li>
+                      <ol class="meta">
+                        <li>
+                        <code>properties</code>
+                        </li>
+                      </ol>
+                      <section class="description">
+                        Describes the properties of a Virtual Machine Extension.
+                      </section>
+                    </li>
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_CreateOrUpdate"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Delete">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Delete" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Delete"></h3>
+  <p>The operation to delete a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Delete"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Get" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Get"></h3>
+  <p>The operation to get a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}?api-version[&amp;$expand]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$expand</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The expand expression to apply on the operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Get"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Deallocate">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Deallocate" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Deallocate"></h3>
+  <p>Shuts down the Virtual Machine and releases the compute resources. You are not billed for the compute resources that this Virtual Machine uses.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/deallocate?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Deallocate"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Generalize">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Generalize" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Generalize"></h3>
+  <p>Sets the state of the VM as Generalized.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/generalize?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Generalize"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_List">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_List" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_List"></h3>
+  <p>The operation to list virtual machines under a resource group.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_List"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_ListAll">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_ListAll" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_ListAll"></h3>
+  <p>Gets the list of Virtual Machines in the subscription. Use nextLink property in the response to get the next page of Virtual Machines. Do this till nextLink is not null to fetch all the Virtual Machines.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/virtualMachines?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_ListAll"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_ListAvailableSizes">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_ListAvailableSizes" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_ListAvailableSizes"></h3>
+  <p>Lists all available virtual machine sizes it can be resized to for a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/vmSizes?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_ListAvailableSizes"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_PowerOff">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_PowerOff" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_PowerOff"></h3>
+  <p>The operation to power off (stop) a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/powerOff?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_PowerOff"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Restart">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Restart" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Restart"></h3>
+  <p>The operation to restart a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/restart?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Restart"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Start">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Start" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Start"></h3>
+  <p>The operation to start a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/start?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Start"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachines_Redeploy">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachines_Redeploy" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachines_Redeploy"></h3>
+  <p>The operation to redeploy a virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/redeploy?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachines_Redeploy"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_CreateOrUpdate">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_CreateOrUpdate" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_CreateOrUpdate"></h3>
+  <p>The operation to create or update a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">PUT</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{name}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>name</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the Create Virtual Machine Scale Set operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>parameters</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        Parameters supplied to the Create Virtual Machine Scale Set operation.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>sku</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the virtual machine scale set sku.
+              </section>
+            </li>
+            <li>
+              <ol class="meta">
+                <li>
+                <code>properties</code>
+                </li>
+              </ol>
+              <section class="description">
+                Describes the properties of a Virtual Machine Scale Set.
+              </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>201</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_CreateOrUpdate"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_Deallocate">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_Deallocate" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_Deallocate"></h3>
+  <p>The operation to deallocate virtual machines in a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/deallocate?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmInstanceIDs</code>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The list of virtual machine scale set instance IDs.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>instanceIds</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the virtual machine scale set instance ids.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_Deallocate"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_Delete">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_Delete" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_Delete"></h3>
+  <p>The operation to delete a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_Delete"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_Get" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_Get"></h3>
+  <p>The operation to get a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_Get"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_DeleteInstances">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_DeleteInstances" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_DeleteInstances"></h3>
+  <p>The operation to delete virtual machines in a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/delete?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmInstanceIDs</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The list of virtual machine scale set instance IDs.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>instanceIds</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the virtual machine scale set instance ids.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_DeleteInstances"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_GetInstanceView">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_GetInstanceView" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_GetInstanceView"></h3>
+  <p>The operation to get a virtual machine scale set instance view.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/instanceView?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_GetInstanceView"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_List">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_List" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_List"></h3>
+  <p>The operation to list virtual machine scale sets under a resource group.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_List"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_ListAll">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_ListAll" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_ListAll"></h3>
+  <p>Gets the list of Virtual Machine Scale Sets in the subscription. Use nextLink property in the response to get the next page of Virtual Machine Scale Sets. Do this till nextLink is not null to fetch all the Virtual Machine Scale Sets.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/providers/Microsoft.Compute/virtualMachineScaleSets?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_ListAll"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_ListSkus">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_ListSkus" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_ListSkus"></h3>
+  <p>The operation to list available skus for a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/skus?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_ListSkus"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_PowerOff">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_PowerOff" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_PowerOff"></h3>
+  <p>The operation to power off (stop) virtual machines in a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/poweroff?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmInstanceIDs</code>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The list of virtual machine scale set instance IDs.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>instanceIds</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the virtual machine scale set instance ids.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_PowerOff"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_Restart">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_Restart" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_Restart"></h3>
+  <p>The operation to restart virtual machines in a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/restart?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmInstanceIDs</code>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The list of virtual machine scale set instance IDs.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>instanceIds</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the virtual machine scale set instance ids.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_Restart"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_Start">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_Start" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_Start"></h3>
+  <p>The operation to start virtual machines in a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/start?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmInstanceIDs</code>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The list of virtual machine scale set instance IDs.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>instanceIds</code>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the virtual machine scale set instance ids.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_Start"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_UpdateInstances">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_UpdateInstances" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_UpdateInstances"></h3>
+  <p>The operation to manually upgrade virtual machines in a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/manualupgrade?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmInstanceIDs</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code></code>
+        </li>
+      </ol>
+      <section class="description">
+        The list of virtual machine scale set instance IDs.
+          
+          
+          <p>
+            <a class="child-toggle">view child properties</a>
+          </p>
+          <ul class="member-details">
+            <li>
+              <ol class="meta">
+                <li>
+                <code>instanceIds</code>
+                  <em>(required)</em>
+                </li>
+                <li>
+                  <code>array</code>
+                </li>
+              </ol>
+              <section class="description">
+                Gets or sets the virtual machine scale set instance ids.
+                  
+                  
+                  <ul class="member-details">
+                  </ul>    </section>
+            </li>
+          </ul>      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_UpdateInstances"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSets_Reimage">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSets_Reimage" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSets_Reimage"></h3>
+  <p>The operation to re-image virtual machines in a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/reimage?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSets_Reimage"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_Reimage">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_Reimage" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_Reimage"></h3>
+  <p>The operation to re-image a virtual machine scale set instance.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}/reimage?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_Reimage"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_Deallocate">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_Deallocate" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_Deallocate"></h3>
+  <p>The operation to deallocate a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}/deallocate?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_Deallocate"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_Delete">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_Delete" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_Delete"></h3>
+  <p>The operation to delete a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">DELETE</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+      <li>
+        <ol class="meta">
+          <li>
+            <code>204</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_Delete"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_Get">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_Get" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_Get"></h3>
+  <p>The operation to get a virtual machine scale set virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_Get"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_GetInstanceView">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_GetInstanceView" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_GetInstanceView"></h3>
+  <p>The operation to get a virtual machine scale set virtual machine.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}/instanceView?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_GetInstanceView"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_List">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_List" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_List"></h3>
+  <p>The operation to list virtual machine scale sets VMs.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">GET</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{virtualMachineScaleSetName}/virtualMachines?api-version[&amp;$filter&amp;$select&amp;$expand]</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>virtualMachineScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$filter</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The filter to apply on the operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$select</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The list parameters.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>$expand</code>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The expand expression to apply on the operation.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>200</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_List"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_PowerOff">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_PowerOff" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_PowerOff"></h3>
+  <p>The operation to power off (stop) a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}/poweroff?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_PowerOff"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_Restart">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_Restart" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_Restart"></h3>
+  <p>The operation to restart a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}/restart?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_Restart"></div>
+  </section>
+</div>
+<header class="header" id="VirtualMachineScaleSetVMs_Start">
+  <div class="primary">
+  <h3 id="management_azure_com_ComputeManagementClient_2015_06_15_VirtualMachineScaleSetVMs_Start" data-uid="management.azure.com/ComputeManagementClient/2015-06-15/VirtualMachineScaleSetVMs_Start"></h3>
+  <p>The operation to start a virtual machine scale set.</p>
+
+  </div>
+</header>
+<div class="level">
+  <section class="primary">
+    <h4>Request</h4>
+    <div>
+      <pre><code class="lang-http"><span class="method-http-verb">POST</span> /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualmachines/{instanceId}/start?api-version</code></pre>
+    </div>
+    <h4>Properties</h4>
+    <ul class="member-details">
+    <li>
+      <ol class="meta">
+        <li>
+          <code>resourceGroupName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the resource group.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>vmScaleSetName</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The name of the virtual machine scale set.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>instanceId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        The instance id of the virtual machine.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>api-version</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Client Api Version.
+      </section>
+    </li>
+    <li>
+      <ol class="meta">
+        <li>
+          <code>subscriptionId</code>
+          <em>(required)</em>
+        </li>
+        <li>
+          <code>string</code>
+        </li>
+      </ol>
+      <section class="description">
+        Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+      </section>
+    </li>
+    </ul>
+    <h4>Returns</h4>
+    <h6>HTTP RESPONSE CODES</h6>
+    <ul class="member-details">
+      <li>
+        <ol class="meta">
+          <li>
+            <code>202</code>
+          </li>
+        </ol>
+        <section class="description">
+          
+        </section>
+      </li>
+    </ul>
+  </section>
+  <section class="secondary">
+    <div class="api-example" data-api-interactive="false" data-api-example-endpoint="" data-api-example-authorization="" data-api-swagger-url="Compute.swagger.json" data-api-operation-id="VirtualMachineScaleSetVMs_Start"></div>
+  </section>
+</div>
+
+              </article>
+
+          
+      </div>
+    </div>
+    </div>
+    <div id="openFeedbackContainer" class="openfeedback-container footer-layout"></div>
+    <div id="footerWrapper"></div>
+    <script src="../_themes/javascript/052334480c38757b048e.rest.js"></script>
+  </body>
+</html>

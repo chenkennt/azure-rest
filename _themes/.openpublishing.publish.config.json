@@ -1,0 +1,6 @@
+{
+    "build_entry_point": "docs.ps1",
+    "docsets_to_publish": [],
+    "notification_subscribers": [""],
+    "branches_to_filter": ["live"]
+}
