@@ -50,7 +50,11 @@
             "type": "string"
           },
           {
-            "$ref": "#/parameters/SubscriptionIdParameter"
+            "name": "subscriptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
           }
         ],
         "responses": {
@@ -82,10 +86,18 @@
             "description": "Name of the resource group to get the permissions for.The name is case insensitive."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           },
           {
-            "$ref": "#/parameters/SubscriptionIdParameter"
+            "name": "subscriptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
           }
         ],
         "responses": {
@@ -147,10 +159,18 @@
             "description": "Resource"
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           },
           {
-            "$ref": "#/parameters/SubscriptionIdParameter"
+            "name": "subscriptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
           }
         ],
         "responses": {
@@ -293,10 +313,18 @@
             "description": "The filter to apply on the operation."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           },
           {
-            "$ref": "#/parameters/SubscriptionIdParameter"
+            "name": "subscriptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
           }
         ],
         "responses": {
@@ -336,10 +364,18 @@
             "description": "The filter to apply on the operation."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           },
           {
-            "$ref": "#/parameters/SubscriptionIdParameter"
+            "name": "subscriptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
           }
         ],
         "responses": {
@@ -380,7 +416,11 @@
             "description": "Role assignment name."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -424,7 +464,11 @@
             "description": "Role assignment."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -459,7 +503,11 @@
             "description": "Role assignment name."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -489,7 +537,11 @@
             "x-ms-skip-url-encoding": true
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -526,7 +578,11 @@
             "description": "Role assignment."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -554,7 +610,11 @@
             "x-ms-skip-url-encoding": true
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -583,10 +643,18 @@
             "description": "The filter to apply on the operation."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           },
           {
-            "$ref": "#/parameters/SubscriptionIdParameter"
+            "name": "subscriptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Gets subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
           }
         ],
         "responses": {
@@ -627,7 +695,11 @@
             "description": "The filter to apply on the operation."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -668,7 +740,11 @@
             "description": "Role definition id."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -703,7 +779,11 @@
             "description": "Role definition Id"
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -747,7 +827,11 @@
             "description": "Role definition."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -777,7 +861,11 @@
             "x-ms-skip-url-encoding": true
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
@@ -814,7 +902,11 @@
             "description": "The filter to apply on the operation."
           },
           {
-            "$ref": "#/parameters/ApiVersionParameter"
+            "name": "api-version",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Client Api Version."
           }
         ],
         "responses": {
