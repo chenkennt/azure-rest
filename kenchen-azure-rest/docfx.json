@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "swagger/*.json"
+          "swagger/*.json",
+          "*.md"
         ],
         "exclude": [
           "**/obj/**",
