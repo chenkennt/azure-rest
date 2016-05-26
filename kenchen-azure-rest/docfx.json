@@ -3,7 +3,6 @@
     "content": [
       {
         "files": [
-          "**/*.md",
           "swagger/*.json"
         ],
         "exclude": [
@@ -28,9 +27,18 @@
         "dest": null
       }
     ],
-    "overwrite": [],
+    "overwrite": [
+      {
+        "files": [
+          "swagger/*.md"
+        ]
+      }
+    ],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "_mockServerUrl": "https://apiexproxy.azurewebsites.net/svc",
+      "_mockServerAuthorization": "Bearer {token:https://graph.windows.net/}"
+    },
     "fileMetadata": {},
     "template": [
       "docs.html"
